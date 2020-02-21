@@ -18,12 +18,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public User authorize(@NonNull User user) {
         log.info("Authorization user : {}", user);
-        return null;
+        //TODO: update authorize
+        return user;
     }
 
     @Override
     public User update(@NonNull User user) {
         log.info("Updating user : {}", user);
-        return null;
+        //TODO: update logic
+        return user;
     }
 }

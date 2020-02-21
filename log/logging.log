@@ -1,0 +1,275 @@
+"2020-02-21 20:45:17 - Starting Application on hp with PID 6001 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
+""2020-02-21 20:45:17 - The following profiles are active: dev
+""2020-02-21 20:45:17 - Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@7fd50002: startup date [Fri Feb 21 20:45:17 EET 2020]; root of context hierarchy
+""2020-02-21 20:45:20 - Mapped "{[/api/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(ru.server.integration.application.domain.User)
+""2020-02-21 20:45:20 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+""2020-02-21 20:45:20 - Mapped URL path [/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+""2020-02-21 20:45:20 - Looking for @ControllerAdvice: org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@7fd50002: startup date [Fri Feb 21 20:45:17 EET 2020]; root of context hierarchy
+""2020-02-21 20:45:21 - HikariPool-1 - Starting...
+""2020-02-21 20:45:21 - HikariPool-1 - Start completed.
+""2020-02-21 20:45:22 - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2020-02-21 20:45:22 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2020-02-21 20:45:22 - HHH000412: Hibernate Core {5.2.17.Final}
+""2020-02-21 20:45:22 - HHH000206: hibernate.properties not found
+""2020-02-21 20:45:22 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2020-02-21 20:45:22 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2020-02-21 20:45:23 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Temporal should only be set on a java.util.Date or java.util.Calendar property: ru.server.integration.application.domain.Project.created
+""2020-02-21 20:45:23 - HikariPool-1 - Shutdown initiated...
+""2020-02-21 20:45:23 - HikariPool-1 - Shutdown completed.
+""2020-02-21 20:45:23 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-02-21 20:45:23 - Application run failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Temporal should only be set on a java.util.Date or java.util.Calendar property: ru.server.integration.application.domain.Project.created
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:61)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at ru.server.integration.application.Application.main(Application.java:14)
+Caused by: org.hibernate.AnnotationException: @Temporal should only be set on a java.util.Date or java.util.Calendar property: ru.server.integration.application.domain.Project.created
+	at org.hibernate.cfg.annotations.SimpleValueBinder.setType(SimpleValueBinder.java:189)
+	at org.hibernate.cfg.annotations.PropertyBinder.makePropertyAndValue(PropertyBinder.java:185)
+	at org.hibernate.cfg.annotations.PropertyBinder.makePropertyValueAndBind(PropertyBinder.java:205)
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:2261)
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:925)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:752)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:249)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:222)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:265)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
+	... 16 common frames omitted
+"2020-02-21 20:46:26 - Starting Application on hp with PID 6143 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
+""2020-02-21 20:46:26 - The following profiles are active: dev
+""2020-02-21 20:46:26 - Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@4c163e3: startup date [Fri Feb 21 20:46:26 EET 2020]; root of context hierarchy
+""2020-02-21 20:46:28 - Mapped "{[/api/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(ru.server.integration.application.domain.User)
+""2020-02-21 20:46:28 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+""2020-02-21 20:46:28 - Mapped URL path [/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+""2020-02-21 20:46:29 - Looking for @ControllerAdvice: org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@4c163e3: startup date [Fri Feb 21 20:46:26 EET 2020]; root of context hierarchy
+""2020-02-21 20:46:29 - HikariPool-1 - Starting...
+""2020-02-21 20:46:29 - HikariPool-1 - Start completed.
+""2020-02-21 20:46:29 - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2020-02-21 20:46:29 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2020-02-21 20:46:29 - HHH000412: Hibernate Core {5.2.17.Final}
+""2020-02-21 20:46:29 - HHH000206: hibernate.properties not found
+""2020-02-21 20:46:29 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2020-02-21 20:46:29 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2020-02-21 20:46:30 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Illegal attempt to map a non collection as a @OneToMany, @ManyToMany or @CollectionOfElements: ru.server.integration.application.domain.Project.creator
+""2020-02-21 20:46:30 - HikariPool-1 - Shutdown initiated...
+""2020-02-21 20:46:30 - HikariPool-1 - Shutdown completed.
+""2020-02-21 20:46:30 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-02-21 20:46:30 - Application run failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Illegal attempt to map a non collection as a @OneToMany, @ManyToMany or @CollectionOfElements: ru.server.integration.application.domain.Project.creator
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:61)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at ru.server.integration.application.Application.main(Application.java:14)
+Caused by: org.hibernate.AnnotationException: Illegal attempt to map a non collection as a @OneToMany, @ManyToMany or @CollectionOfElements: ru.server.integration.application.domain.Project.creator
+	at org.hibernate.cfg.annotations.CollectionBinder.getCollectionBinder(CollectionBinder.java:325)
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1918)
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:925)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:752)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:249)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:222)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:265)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
+	... 16 common frames omitted
+"2020-02-21 20:47:08 - Starting Application on hp with PID 6270 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
+""2020-02-21 20:47:08 - The following profiles are active: dev
+""2020-02-21 20:47:08 - Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@433defed: startup date [Fri Feb 21 20:47:08 EET 2020]; root of context hierarchy
+""2020-02-21 20:47:10 - Mapped "{[/api/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(ru.server.integration.application.domain.User)
+""2020-02-21 20:47:10 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+""2020-02-21 20:47:10 - Mapped URL path [/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+""2020-02-21 20:47:11 - Looking for @ControllerAdvice: org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@433defed: startup date [Fri Feb 21 20:47:08 EET 2020]; root of context hierarchy
+""2020-02-21 20:47:11 - HikariPool-1 - Starting...
+""2020-02-21 20:47:11 - HikariPool-1 - Start completed.
+""2020-02-21 20:47:11 - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2020-02-21 20:47:11 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2020-02-21 20:47:11 - HHH000412: Hibernate Core {5.2.17.Final}
+""2020-02-21 20:47:11 - HHH000206: hibernate.properties not found
+""2020-02-21 20:47:11 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2020-02-21 20:47:11 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2020-02-21 20:47:12 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
+""2020-02-21 20:47:12 - HikariPool-1 - Shutdown initiated...
+""2020-02-21 20:47:12 - HikariPool-1 - Shutdown completed.
+""2020-02-21 20:47:12 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-02-21 20:47:12 - Application run failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:61)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at ru.server.integration.application.Application.main(Application.java:14)
+Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:97)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1771)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1715)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1602)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
+	... 16 common frames omitted
+"2020-02-21 20:55:38 - Starting Application on hp with PID 3104 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
+""2020-02-21 20:55:38 - The following profiles are active: dev
+""2020-02-21 20:55:38 - Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@25be7b63: startup date [Fri Feb 21 20:55:38 EET 2020]; root of context hierarchy
+""2020-02-21 20:55:41 - Mapped "{[/api/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(ru.server.integration.application.domain.User)
+""2020-02-21 20:55:41 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+""2020-02-21 20:55:41 - Mapped URL path [/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+""2020-02-21 20:55:41 - Looking for @ControllerAdvice: org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@25be7b63: startup date [Fri Feb 21 20:55:38 EET 2020]; root of context hierarchy
+""2020-02-21 20:55:43 - HikariPool-1 - Starting...
+""2020-02-21 20:55:43 - HikariPool-1 - Start completed.
+""2020-02-21 20:55:43 - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2020-02-21 20:55:43 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2020-02-21 20:55:44 - HHH000412: Hibernate Core {5.2.17.Final}
+""2020-02-21 20:55:44 - HHH000206: hibernate.properties not found
+""2020-02-21 20:55:44 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2020-02-21 20:55:44 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2020-02-21 20:55:45 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
+""2020-02-21 20:55:45 - HikariPool-1 - Shutdown initiated...
+""2020-02-21 20:55:45 - HikariPool-1 - Shutdown completed.
+""2020-02-21 20:55:45 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-02-21 20:55:45 - Application run failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:61)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at ru.server.integration.application.Application.main(Application.java:14)
+Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:97)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1771)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1715)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1602)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
+	... 16 common frames omitted
+"2020-02-21 20:56:45 - Starting Application on hp with PID 3237 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
+""2020-02-21 20:56:45 - The following profiles are active: dev
+""2020-02-21 20:56:45 - Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@548a24a: startup date [Fri Feb 21 20:56:45 EET 2020]; root of context hierarchy
+""2020-02-21 20:56:49 - Mapped "{[/api/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(ru.server.integration.application.domain.User)
+""2020-02-21 20:56:49 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+""2020-02-21 20:56:49 - Mapped URL path [/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+""2020-02-21 20:56:49 - Looking for @ControllerAdvice: org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@548a24a: startup date [Fri Feb 21 20:56:45 EET 2020]; root of context hierarchy
+""2020-02-21 20:56:49 - HikariPool-1 - Starting...
+""2020-02-21 20:56:50 - HikariPool-1 - Start completed.
+""2020-02-21 20:56:50 - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2020-02-21 20:56:50 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2020-02-21 20:56:50 - HHH000412: Hibernate Core {5.2.17.Final}
+""2020-02-21 20:56:50 - HHH000206: hibernate.properties not found
+""2020-02-21 20:56:50 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2020-02-21 20:56:50 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2020-02-21 20:56:51 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5a3cf878'
+""2020-02-21 20:56:51 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-21 20:56:51 - Start project initializing...
+""2020-02-21 20:56:51 - Database initialization...
+""2020-02-21 20:56:51 - Project initialized
+""2020-02-21 20:56:52 - Registering beans for JMX exposure on startup
+""2020-02-21 20:56:52 - Bean with name 'dataSource' has been autodetected for JMX exposure
+""2020-02-21 20:56:52 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+""2020-02-21 20:56:52 - Started HttpServer on /0:0:0:0:0:0:0:0%0:8025
+""2020-02-21 20:56:52 - Netty started on port(s): 8025
+""2020-02-21 20:56:52 - Started Application in 8.441 seconds (JVM running for 10.525)
+""2020-02-21 20:58:56 - Closing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@548a24a: startup date [Fri Feb 21 20:56:45 EET 2020]; root of context hierarchy
+""2020-02-21 20:58:56 - Unregistering JMX-exposed beans on shutdown
+""2020-02-21 20:58:56 - Unregistering JMX-exposed beans
+""2020-02-21 20:58:56 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-21 20:58:56 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+""2020-02-21 20:58:56 - HikariPool-1 - Shutdown initiated...
+""2020-02-21 20:58:56 - HikariPool-1 - Shutdown completed.
+""2020-02-21 20:58:56 - Stopped HttpServer on /0:0:0:0:0:0:0:0%0:8025
+"

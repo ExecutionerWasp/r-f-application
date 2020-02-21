@@ -1,0 +1,15 @@
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/exception/UserNotFoundException.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/config/RequestConfig.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/Application.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/service/UserService.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/repository/ProjectRepository.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/service/impl/LeadServiceImpl.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/domain/ServiceType.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/repository/UserRepository.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/domain/User.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/domain/Lead.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/service/LeadService.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/domain/Project.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/exception/LeadNotFoundException.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/service/impl/UserServiceImpl.java
+/home/alvin/projects/java/ServerIntegration/src/main/java/ru/server/integration/application/controller/UserController.java

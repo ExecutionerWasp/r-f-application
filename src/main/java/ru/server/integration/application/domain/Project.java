@@ -24,7 +24,7 @@ public class Project implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User creator;
 
@@ -35,7 +35,6 @@ public class Project implements Serializable {
     @Column(length = 5000)
     private String request;
 
-    @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime created;
     @Column(length = 1000)
     private String title;
