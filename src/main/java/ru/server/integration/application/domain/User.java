@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 /**
@@ -15,16 +16,15 @@ import java.util.Set;
 
 @Data
 @Builder
-@ToString(of = {"id", "token", "projects"})
+@ToString(of = {"id", "token", "tokenUpdatedAt", "idAgency", "units"})
 @NoArgsConstructor
 @AllArgsConstructor
 public class User implements Serializable {
-    private static final long serialVersionUID = 2L;
+    private static final long serialVersionUID = 4L;
     @Id
-    private String id;
+    private Long id;
     private String token;
-
-    @OneToMany(fetch = FetchType.EAGER)
-    @JoinColumn(name = "project_id")
-    private Set<Project> projects;
+    private LocalDateTime tokenUpdatedAt;
+    private Boolean idAgency;
+    private Integer units;
 }
