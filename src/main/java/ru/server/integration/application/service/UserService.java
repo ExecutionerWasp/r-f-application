@@ -9,7 +9,7 @@ import ru.server.integration.application.domain.User;
 
 public interface UserService {
 
-    User authorize(@NonNull User user);
+    User authorize(@NonNull String login, @NonNull String password);
 
     User update(@NonNull User user);
 

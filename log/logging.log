@@ -1,275 +1,387 @@
-"2020-02-21 20:45:17 - Starting Application on hp with PID 6001 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
-""2020-02-21 20:45:17 - The following profiles are active: dev
-""2020-02-21 20:45:17 - Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@7fd50002: startup date [Fri Feb 21 20:45:17 EET 2020]; root of context hierarchy
-""2020-02-21 20:45:20 - Mapped "{[/api/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(ru.server.integration.application.domain.User)
-""2020-02-21 20:45:20 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
-""2020-02-21 20:45:20 - Mapped URL path [/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
-""2020-02-21 20:45:20 - Looking for @ControllerAdvice: org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@7fd50002: startup date [Fri Feb 21 20:45:17 EET 2020]; root of context hierarchy
-""2020-02-21 20:45:21 - HikariPool-1 - Starting...
-""2020-02-21 20:45:21 - HikariPool-1 - Start completed.
-""2020-02-21 20:45:22 - Building JPA container EntityManagerFactory for persistence unit 'default'
-""2020-02-21 20:45:22 - HHH000204: Processing PersistenceUnitInfo [
+"2020-02-28 17:37:35 - Starting Application on hp with PID 5083 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
+""2020-02-28 17:37:35 - The following profiles are active: dev
+""2020-02-28 17:37:36 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@34bde49d: startup date [Fri Feb 28 17:37:36 EET 2020]; root of context hierarchy
+""2020-02-28 17:37:49 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4f8f580e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-02-28 17:37:54 - Tomcat initialized with port(s): 8025 (http)
+""2020-02-28 17:37:54 - Starting service [Tomcat]
+""2020-02-28 17:37:54 - Starting Servlet Engine: Apache Tomcat/8.5.34
+""2020-02-28 17:37:54 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+""2020-02-28 17:37:55 - Initializing Spring embedded WebApplicationContext
+""2020-02-28 17:37:55 - Root WebApplicationContext: initialization completed in 19478 ms
+""2020-02-28 17:37:55 - Servlet dispatcherServlet mapped to [/]
+""2020-02-28 17:37:55 - Servlet webServlet mapped to [/h2/*]
+""2020-02-28 17:37:55 - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2020-02-28 17:37:55 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2020-02-28 17:37:55 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2020-02-28 17:37:55 - Mapping filter: 'requestContextFilter' to: [/*]
+""2020-02-28 17:37:57 - HikariPool-1 - Starting...
+""2020-02-28 17:38:00 - HikariPool-1 - Start completed.
+""2020-02-28 17:38:01 - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2020-02-28 17:38:01 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-""2020-02-21 20:45:22 - HHH000412: Hibernate Core {5.2.17.Final}
-""2020-02-21 20:45:22 - HHH000206: hibernate.properties not found
-""2020-02-21 20:45:22 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-""2020-02-21 20:45:22 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-""2020-02-21 20:45:23 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Temporal should only be set on a java.util.Date or java.util.Calendar property: ru.server.integration.application.domain.Project.created
-""2020-02-21 20:45:23 - HikariPool-1 - Shutdown initiated...
-""2020-02-21 20:45:23 - HikariPool-1 - Shutdown completed.
-""2020-02-21 20:45:23 - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-""2020-02-21 20:45:23 - Application run failed
-"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Temporal should only be set on a java.util.Date or java.util.Calendar property: ru.server.integration.application.domain.Project.created
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
-	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:61)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at ru.server.integration.application.Application.main(Application.java:14)
-Caused by: org.hibernate.AnnotationException: @Temporal should only be set on a java.util.Date or java.util.Calendar property: ru.server.integration.application.domain.Project.created
-	at org.hibernate.cfg.annotations.SimpleValueBinder.setType(SimpleValueBinder.java:189)
-	at org.hibernate.cfg.annotations.PropertyBinder.makePropertyAndValue(PropertyBinder.java:185)
-	at org.hibernate.cfg.annotations.PropertyBinder.makePropertyValueAndBind(PropertyBinder.java:205)
-	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:2261)
-	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:925)
-	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:752)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:249)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:222)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:265)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
-	... 16 common frames omitted
-"2020-02-21 20:46:26 - Starting Application on hp with PID 6143 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
-""2020-02-21 20:46:26 - The following profiles are active: dev
-""2020-02-21 20:46:26 - Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@4c163e3: startup date [Fri Feb 21 20:46:26 EET 2020]; root of context hierarchy
-""2020-02-21 20:46:28 - Mapped "{[/api/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(ru.server.integration.application.domain.User)
-""2020-02-21 20:46:28 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
-""2020-02-21 20:46:28 - Mapped URL path [/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
-""2020-02-21 20:46:29 - Looking for @ControllerAdvice: org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@4c163e3: startup date [Fri Feb 21 20:46:26 EET 2020]; root of context hierarchy
-""2020-02-21 20:46:29 - HikariPool-1 - Starting...
-""2020-02-21 20:46:29 - HikariPool-1 - Start completed.
-""2020-02-21 20:46:29 - Building JPA container EntityManagerFactory for persistence unit 'default'
-""2020-02-21 20:46:29 - HHH000204: Processing PersistenceUnitInfo [
+""2020-02-28 17:38:03 - HHH000412: Hibernate Core {5.2.17.Final}
+""2020-02-28 17:38:03 - HHH000206: hibernate.properties not found
+""2020-02-28 17:38:04 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2020-02-28 17:38:07 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2020-02-28 17:38:12 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@464ede1f'
+""2020-02-28 17:38:12 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-28 17:38:14 - Start project initializing...
+""2020-02-28 17:38:14 - Database initialization...
+""2020-02-28 17:38:15 - Project initialized
+""2020-02-28 17:38:16 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 17:38:17 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@34bde49d: startup date [Fri Feb 28 17:37:36 EET 2020]; root of context hierarchy
+""2020-02-28 17:38:17 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-02-28 17:38:17 - Mapped "{[/],methods=[GET]}" onto public java.lang.String ru.server.integration.application.controller.MainController.main(org.springframework.ui.Model)
+""2020-02-28 17:38:17 - Mapped "{[/api/user/login],methods=[POST]}" onto public reactor.core.publisher.Mono<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(java.lang.String,java.lang.String)
+""2020-02-28 17:38:17 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2020-02-28 17:38:17 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2020-02-28 17:38:17 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 17:38:17 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 17:38:18 - Adding welcome page template: index
+""2020-02-28 17:38:20 - Registering beans for JMX exposure on startup
+""2020-02-28 17:38:20 - Bean with name 'dataSource' has been autodetected for JMX exposure
+""2020-02-28 17:38:20 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+""2020-02-28 17:38:20 - Tomcat started on port(s): 8025 (http) with context path ''
+""2020-02-28 17:38:21 - Started Application in 55.917 seconds (JVM running for 71.952)
+""2020-02-28 17:38:38 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2020-02-28 17:38:38 - FrameworkServlet 'dispatcherServlet': initialization started
+""2020-02-28 17:38:38 - FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
+""2020-02-28 17:38:38 - Main page...
+""2020-02-28 17:44:58 - Main page...
+""2020-02-28 17:45:05 - Main page...
+""2020-02-28 17:45:18 - Main page...
+""2020-02-28 17:45:33 - Main page...
+""2020-02-28 17:45:49 - Main page...
+""2020-02-28 17:46:03 - Main page...
+""2020-02-28 17:46:10 - Main page...
+""2020-02-28 17:46:28 - Main page...
+""2020-02-28 17:46:35 - Main page...
+""2020-02-28 17:46:41 - Main page...
+""2020-02-28 17:46:53 - Main page...
+""2020-02-28 17:47:03 - Main page...
+""2020-02-28 17:47:08 - Main page...
+""2020-02-28 17:47:15 - Main page...
+""2020-02-28 17:47:21 - Main page...
+""2020-02-28 17:47:26 - Main page...
+""2020-02-28 17:47:34 - Main page...
+""2020-02-28 17:48:27 - Main page...
+""2020-02-28 17:50:34 - Main page...
+""2020-02-28 18:09:12 - Starting Application on hp with PID 3548 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
+""2020-02-28 18:09:12 - The following profiles are active: dev
+""2020-02-28 18:09:12 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5db6b9cd: startup date [Fri Feb 28 18:09:12 EET 2020]; root of context hierarchy
+""2020-02-28 18:09:15 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$36d4597] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-02-28 18:09:18 - Tomcat initialized with port(s): 8025 (http)
+""2020-02-28 18:09:18 - Starting service [Tomcat]
+""2020-02-28 18:09:18 - Starting Servlet Engine: Apache Tomcat/8.5.34
+""2020-02-28 18:09:18 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+""2020-02-28 18:09:18 - Initializing Spring embedded WebApplicationContext
+""2020-02-28 18:09:18 - Root WebApplicationContext: initialization completed in 6619 ms
+""2020-02-28 18:09:19 - Servlet dispatcherServlet mapped to [/]
+""2020-02-28 18:09:19 - Servlet webServlet mapped to [/h2/*]
+""2020-02-28 18:09:19 - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2020-02-28 18:09:19 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2020-02-28 18:09:19 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2020-02-28 18:09:19 - Mapping filter: 'requestContextFilter' to: [/*]
+""2020-02-28 18:09:20 - HikariPool-1 - Starting...
+""2020-02-28 18:09:21 - HikariPool-1 - Start completed.
+""2020-02-28 18:09:21 - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2020-02-28 18:09:21 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-""2020-02-21 20:46:29 - HHH000412: Hibernate Core {5.2.17.Final}
-""2020-02-21 20:46:29 - HHH000206: hibernate.properties not found
-""2020-02-21 20:46:29 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-""2020-02-21 20:46:29 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-""2020-02-21 20:46:30 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Illegal attempt to map a non collection as a @OneToMany, @ManyToMany or @CollectionOfElements: ru.server.integration.application.domain.Project.creator
-""2020-02-21 20:46:30 - HikariPool-1 - Shutdown initiated...
-""2020-02-21 20:46:30 - HikariPool-1 - Shutdown completed.
-""2020-02-21 20:46:30 - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-""2020-02-21 20:46:30 - Application run failed
-"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Illegal attempt to map a non collection as a @OneToMany, @ManyToMany or @CollectionOfElements: ru.server.integration.application.domain.Project.creator
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
-	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:61)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at ru.server.integration.application.Application.main(Application.java:14)
-Caused by: org.hibernate.AnnotationException: Illegal attempt to map a non collection as a @OneToMany, @ManyToMany or @CollectionOfElements: ru.server.integration.application.domain.Project.creator
-	at org.hibernate.cfg.annotations.CollectionBinder.getCollectionBinder(CollectionBinder.java:325)
-	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1918)
-	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:925)
-	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:752)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:249)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:222)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:265)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
-	... 16 common frames omitted
-"2020-02-21 20:47:08 - Starting Application on hp with PID 6270 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
-""2020-02-21 20:47:08 - The following profiles are active: dev
-""2020-02-21 20:47:08 - Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@433defed: startup date [Fri Feb 21 20:47:08 EET 2020]; root of context hierarchy
-""2020-02-21 20:47:10 - Mapped "{[/api/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(ru.server.integration.application.domain.User)
-""2020-02-21 20:47:10 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
-""2020-02-21 20:47:10 - Mapped URL path [/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
-""2020-02-21 20:47:11 - Looking for @ControllerAdvice: org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@433defed: startup date [Fri Feb 21 20:47:08 EET 2020]; root of context hierarchy
-""2020-02-21 20:47:11 - HikariPool-1 - Starting...
-""2020-02-21 20:47:11 - HikariPool-1 - Start completed.
-""2020-02-21 20:47:11 - Building JPA container EntityManagerFactory for persistence unit 'default'
-""2020-02-21 20:47:11 - HHH000204: Processing PersistenceUnitInfo [
+""2020-02-28 18:09:21 - HHH000412: Hibernate Core {5.2.17.Final}
+""2020-02-28 18:09:21 - HHH000206: hibernate.properties not found
+""2020-02-28 18:09:21 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2020-02-28 18:09:22 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2020-02-28 18:09:24 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4cecc15a'
+""2020-02-28 18:09:24 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-28 18:09:25 - Start project initializing...
+""2020-02-28 18:09:25 - Database initialization...
+""2020-02-28 18:09:25 - Project initialized
+""2020-02-28 18:09:26 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 18:09:26 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5db6b9cd: startup date [Fri Feb 28 18:09:12 EET 2020]; root of context hierarchy
+""2020-02-28 18:09:26 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-02-28 18:09:26 - Mapped "{[/],methods=[GET]}" onto public java.lang.String ru.server.integration.application.controller.MainController.main(org.springframework.ui.Model)
+""2020-02-28 18:09:26 - Mapped "{[/api/user/login],methods=[POST]}" onto public reactor.core.publisher.Mono<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(java.lang.String,java.lang.String)
+""2020-02-28 18:09:26 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2020-02-28 18:09:26 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2020-02-28 18:09:26 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 18:09:26 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 18:09:27 - Adding welcome page template: index
+""2020-02-28 18:09:27 - Registering beans for JMX exposure on startup
+""2020-02-28 18:09:27 - Bean with name 'dataSource' has been autodetected for JMX exposure
+""2020-02-28 18:09:27 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+""2020-02-28 18:09:28 - Tomcat started on port(s): 8025 (http) with context path ''
+""2020-02-28 18:09:28 - Started Application in 18.225 seconds (JVM running for 21.917)
+""2020-02-28 18:10:12 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2020-02-28 18:10:12 - FrameworkServlet 'dispatcherServlet': initialization started
+""2020-02-28 18:10:12 - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+""2020-02-28 18:10:13 - Main page...
+""2020-02-28 18:11:38 - Main page...
+""2020-02-28 18:12:16 - Main page...
+""2020-02-28 18:14:22 - Main page...
+""2020-02-28 18:28:04 - Starting Application on hp with PID 3259 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
+""2020-02-28 18:28:04 - The following profiles are active: dev
+""2020-02-28 18:28:04 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@446a1e84: startup date [Fri Feb 28 18:28:04 EET 2020]; root of context hierarchy
+""2020-02-28 18:28:07 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eb041e5e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-02-28 18:28:08 - Tomcat initialized with port(s): 8025 (http)
+""2020-02-28 18:28:09 - Starting service [Tomcat]
+""2020-02-28 18:28:09 - Starting Servlet Engine: Apache Tomcat/8.5.34
+""2020-02-28 18:28:09 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+""2020-02-28 18:28:09 - Initializing Spring embedded WebApplicationContext
+""2020-02-28 18:28:09 - Root WebApplicationContext: initialization completed in 4857 ms
+""2020-02-28 18:28:09 - Servlet dispatcherServlet mapped to [/]
+""2020-02-28 18:28:09 - Servlet webServlet mapped to [/h2/*]
+""2020-02-28 18:28:09 - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2020-02-28 18:28:09 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2020-02-28 18:28:09 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2020-02-28 18:28:09 - Mapping filter: 'requestContextFilter' to: [/*]
+""2020-02-28 18:28:09 - HikariPool-1 - Starting...
+""2020-02-28 18:28:10 - HikariPool-1 - Start completed.
+""2020-02-28 18:28:10 - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2020-02-28 18:28:10 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-""2020-02-21 20:47:11 - HHH000412: Hibernate Core {5.2.17.Final}
-""2020-02-21 20:47:11 - HHH000206: hibernate.properties not found
-""2020-02-21 20:47:11 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-""2020-02-21 20:47:11 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-""2020-02-21 20:47:12 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
-""2020-02-21 20:47:12 - HikariPool-1 - Shutdown initiated...
-""2020-02-21 20:47:12 - HikariPool-1 - Shutdown completed.
-""2020-02-21 20:47:12 - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-""2020-02-21 20:47:12 - Application run failed
-"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
-	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:61)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at ru.server.integration.application.Application.main(Application.java:14)
-Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
-	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:97)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1771)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1715)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1602)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
-	... 16 common frames omitted
-"2020-02-21 20:55:38 - Starting Application on hp with PID 3104 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
-""2020-02-21 20:55:38 - The following profiles are active: dev
-""2020-02-21 20:55:38 - Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@25be7b63: startup date [Fri Feb 21 20:55:38 EET 2020]; root of context hierarchy
-""2020-02-21 20:55:41 - Mapped "{[/api/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(ru.server.integration.application.domain.User)
-""2020-02-21 20:55:41 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
-""2020-02-21 20:55:41 - Mapped URL path [/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
-""2020-02-21 20:55:41 - Looking for @ControllerAdvice: org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@25be7b63: startup date [Fri Feb 21 20:55:38 EET 2020]; root of context hierarchy
-""2020-02-21 20:55:43 - HikariPool-1 - Starting...
-""2020-02-21 20:55:43 - HikariPool-1 - Start completed.
-""2020-02-21 20:55:43 - Building JPA container EntityManagerFactory for persistence unit 'default'
-""2020-02-21 20:55:43 - HHH000204: Processing PersistenceUnitInfo [
+""2020-02-28 18:28:10 - HHH000412: Hibernate Core {5.2.17.Final}
+""2020-02-28 18:28:10 - HHH000206: hibernate.properties not found
+""2020-02-28 18:28:10 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2020-02-28 18:28:11 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2020-02-28 18:28:12 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5e385b6f'
+""2020-02-28 18:28:12 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-28 18:28:12 - Start project initializing...
+""2020-02-28 18:28:12 - Database initialization...
+""2020-02-28 18:28:13 - Project initialized
+""2020-02-28 18:28:13 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 18:28:13 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@446a1e84: startup date [Fri Feb 28 18:28:04 EET 2020]; root of context hierarchy
+""2020-02-28 18:28:13 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-02-28 18:28:13 - Mapped "{[/],methods=[GET]}" onto public java.lang.String ru.server.integration.application.controller.MainController.main(org.springframework.ui.Model)
+""2020-02-28 18:28:13 - Mapped "{[/api/user/login],methods=[POST]}" onto public reactor.core.publisher.Mono<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(java.lang.String,java.lang.String)
+""2020-02-28 18:28:13 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2020-02-28 18:28:13 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2020-02-28 18:28:13 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 18:28:13 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 18:28:14 - Adding welcome page template: index
+""2020-02-28 18:28:14 - Registering beans for JMX exposure on startup
+""2020-02-28 18:28:14 - Bean with name 'dataSource' has been autodetected for JMX exposure
+""2020-02-28 18:28:14 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+""2020-02-28 18:28:14 - Tomcat started on port(s): 8025 (http) with context path ''
+""2020-02-28 18:28:14 - Started Application in 13.038 seconds (JVM running for 16.564)
+""2020-02-28 18:29:12 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2020-02-28 18:29:12 - FrameworkServlet 'dispatcherServlet': initialization started
+""2020-02-28 18:29:12 - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+""2020-02-28 18:29:12 - Main page...
+""2020-02-28 18:30:24 - Main page...
+""2020-02-28 18:30:34 - Main page...
+""2020-02-28 18:30:42 - Main page...
+""2020-02-28 18:30:52 - Main page...
+""2020-02-28 18:31:00 - Main page...
+""2020-02-28 18:31:16 - Main page...
+""2020-02-28 18:31:25 - Main page...
+""2020-02-28 18:31:34 - Main page...
+""2020-02-28 18:31:42 - Main page...
+""2020-02-28 18:31:50 - Main page...
+""2020-02-28 18:31:58 - Main page...
+""2020-02-28 18:32:06 - Main page...
+""2020-02-28 18:32:16 - Main page...
+""2020-02-28 18:33:00 - Main page...
+""2020-02-28 18:35:03 - Main page...
+""2020-02-28 18:39:05 - Main page...
+""2020-02-28 18:39:52 - Main page...
+""2020-02-28 18:41:16 - Main page...
+""2020-02-28 18:41:31 - Main page...
+""2020-02-28 18:42:06 - Main page...
+""2020-02-28 18:45:43 - Main page...
+""2020-02-28 18:46:09 - Main page...
+""2020-02-28 18:46:36 - Main page...
+""2020-02-28 18:48:37 - Main page...
+""2020-02-28 18:49:14 - Main page...
+""2020-02-28 18:49:49 - Main page...
+""2020-02-28 18:50:18 - Main page...
+""2020-02-28 18:50:44 - Main page...
+""2020-02-28 18:51:09 - Main page...
+""2020-02-28 18:51:31 - Main page...
+""2020-02-28 18:51:40 - Main page...
+""2020-02-28 18:51:47 - Main page...
+""2020-02-28 18:51:58 - Main page...
+""2020-02-28 18:52:05 - Main page...
+""2020-02-28 18:52:36 - Main page...
+""2020-02-28 18:53:29 - Main page...
+""2020-02-28 19:01:25 - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@446a1e84: startup date [Fri Feb 28 18:28:04 EET 2020]; root of context hierarchy
+""2020-02-28 19:01:25 - Unregistering JMX-exposed beans on shutdown
+""2020-02-28 19:01:25 - Unregistering JMX-exposed beans
+""2020-02-28 19:01:25 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-28 19:01:25 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+""2020-02-28 19:01:25 - HikariPool-1 - Shutdown initiated...
+""2020-02-28 19:01:25 - HikariPool-1 - Shutdown completed.
+""2020-02-28 19:01:37 - Starting Application on hp with PID 5547 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
+""2020-02-28 19:01:37 - The following profiles are active: prod
+""2020-02-28 19:01:37 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5db6b9cd: startup date [Fri Feb 28 19:01:37 EET 2020]; root of context hierarchy
+""2020-02-28 19:01:39 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d17b8e8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-02-28 19:01:39 - Tomcat initialized with port(s): 8025 (http)
+""2020-02-28 19:01:39 - Starting service [Tomcat]
+""2020-02-28 19:01:39 - Starting Servlet Engine: Apache Tomcat/8.5.34
+""2020-02-28 19:01:40 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+""2020-02-28 19:01:40 - Initializing Spring embedded WebApplicationContext
+""2020-02-28 19:01:40 - Root WebApplicationContext: initialization completed in 2723 ms
+""2020-02-28 19:01:40 - Servlet dispatcherServlet mapped to [/]
+""2020-02-28 19:01:40 - Servlet webServlet mapped to [/h2/*]
+""2020-02-28 19:01:40 - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2020-02-28 19:01:40 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2020-02-28 19:01:40 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2020-02-28 19:01:40 - Mapping filter: 'requestContextFilter' to: [/*]
+""2020-02-28 19:01:40 - HikariPool-1 - Starting...
+""2020-02-28 19:01:40 - HikariPool-1 - Start completed.
+""2020-02-28 19:01:40 - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2020-02-28 19:01:40 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-""2020-02-21 20:55:44 - HHH000412: Hibernate Core {5.2.17.Final}
-""2020-02-21 20:55:44 - HHH000206: hibernate.properties not found
-""2020-02-21 20:55:44 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-""2020-02-21 20:55:44 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-""2020-02-21 20:55:45 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
-""2020-02-21 20:55:45 - HikariPool-1 - Shutdown initiated...
-""2020-02-21 20:55:45 - HikariPool-1 - Shutdown completed.
-""2020-02-21 20:55:45 - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-""2020-02-21 20:55:45 - Application run failed
-"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
-	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:61)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at ru.server.integration.application.Application.main(Application.java:14)
-Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on ru.server.integration.application.domain.Project.creator references an unknown entity: ru.server.integration.application.domain.User
-	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:97)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1771)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1715)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1602)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
-	... 16 common frames omitted
-"2020-02-21 20:56:45 - Starting Application on hp with PID 3237 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
-""2020-02-21 20:56:45 - The following profiles are active: dev
-""2020-02-21 20:56:45 - Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@548a24a: startup date [Fri Feb 21 20:56:45 EET 2020]; root of context hierarchy
-""2020-02-21 20:56:49 - Mapped "{[/api/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(ru.server.integration.application.domain.User)
-""2020-02-21 20:56:49 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
-""2020-02-21 20:56:49 - Mapped URL path [/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
-""2020-02-21 20:56:49 - Looking for @ControllerAdvice: org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@548a24a: startup date [Fri Feb 21 20:56:45 EET 2020]; root of context hierarchy
-""2020-02-21 20:56:49 - HikariPool-1 - Starting...
-""2020-02-21 20:56:50 - HikariPool-1 - Start completed.
-""2020-02-21 20:56:50 - Building JPA container EntityManagerFactory for persistence unit 'default'
-""2020-02-21 20:56:50 - HHH000204: Processing PersistenceUnitInfo [
+""2020-02-28 19:01:40 - HHH000412: Hibernate Core {5.2.17.Final}
+""2020-02-28 19:01:40 - HHH000206: hibernate.properties not found
+""2020-02-28 19:01:40 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2020-02-28 19:01:41 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2020-02-28 19:01:41 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2b458cd6'
+""2020-02-28 19:01:41 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-28 19:01:42 - Start project initializing...
+""2020-02-28 19:01:42 - Database initialization...
+""2020-02-28 19:01:42 - Project initialized
+""2020-02-28 19:01:42 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 19:01:42 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5db6b9cd: startup date [Fri Feb 28 19:01:37 EET 2020]; root of context hierarchy
+""2020-02-28 19:01:43 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-02-28 19:01:43 - Mapped "{[/],methods=[GET]}" onto public java.lang.String ru.server.integration.application.controller.MainController.main(org.springframework.ui.Model)
+""2020-02-28 19:01:43 - Mapped "{[/api/user/login],methods=[POST]}" onto public reactor.core.publisher.Mono<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(java.lang.String,java.lang.String)
+""2020-02-28 19:01:43 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2020-02-28 19:01:43 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2020-02-28 19:01:43 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 19:01:43 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 19:01:43 - Adding welcome page template: index
+""2020-02-28 19:01:43 - Registering beans for JMX exposure on startup
+""2020-02-28 19:01:43 - Bean with name 'dataSource' has been autodetected for JMX exposure
+""2020-02-28 19:01:43 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+""2020-02-28 19:01:43 - Tomcat started on port(s): 8025 (http) with context path ''
+""2020-02-28 19:01:43 - Started Application in 7.866 seconds (JVM running for 10.268)
+""2020-02-28 19:01:48 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2020-02-28 19:01:48 - FrameworkServlet 'dispatcherServlet': initialization started
+""2020-02-28 19:01:48 - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+""2020-02-28 19:01:49 - Main page...
+""2020-02-28 19:03:17 - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5db6b9cd: startup date [Fri Feb 28 19:01:37 EET 2020]; root of context hierarchy
+""2020-02-28 19:03:17 - Unregistering JMX-exposed beans on shutdown
+""2020-02-28 19:03:17 - Unregistering JMX-exposed beans
+""2020-02-28 19:03:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-28 19:03:17 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+""2020-02-28 19:03:17 - HikariPool-1 - Shutdown initiated...
+""2020-02-28 19:03:17 - HikariPool-1 - Shutdown completed.
+""2020-02-28 19:03:25 - Starting Application on hp with PID 5813 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
+""2020-02-28 19:03:25 - The following profiles are active: dev
+""2020-02-28 19:03:25 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1be2019a: startup date [Fri Feb 28 19:03:25 EET 2020]; root of context hierarchy
+""2020-02-28 19:03:27 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2e458d21] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-02-28 19:03:28 - Tomcat initialized with port(s): 8025 (http)
+""2020-02-28 19:03:28 - Starting service [Tomcat]
+""2020-02-28 19:03:28 - Starting Servlet Engine: Apache Tomcat/8.5.34
+""2020-02-28 19:03:28 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+""2020-02-28 19:03:28 - Initializing Spring embedded WebApplicationContext
+""2020-02-28 19:03:28 - Root WebApplicationContext: initialization completed in 3145 ms
+""2020-02-28 19:03:28 - Servlet dispatcherServlet mapped to [/]
+""2020-02-28 19:03:28 - Servlet webServlet mapped to [/h2/*]
+""2020-02-28 19:03:28 - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2020-02-28 19:03:28 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2020-02-28 19:03:28 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2020-02-28 19:03:28 - Mapping filter: 'requestContextFilter' to: [/*]
+""2020-02-28 19:03:28 - HikariPool-1 - Starting...
+""2020-02-28 19:03:28 - HikariPool-1 - Start completed.
+""2020-02-28 19:03:29 - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2020-02-28 19:03:29 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-""2020-02-21 20:56:50 - HHH000412: Hibernate Core {5.2.17.Final}
-""2020-02-21 20:56:50 - HHH000206: hibernate.properties not found
-""2020-02-21 20:56:50 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-""2020-02-21 20:56:50 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-""2020-02-21 20:56:51 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5a3cf878'
-""2020-02-21 20:56:51 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-""2020-02-21 20:56:51 - Start project initializing...
-""2020-02-21 20:56:51 - Database initialization...
-""2020-02-21 20:56:51 - Project initialized
-""2020-02-21 20:56:52 - Registering beans for JMX exposure on startup
-""2020-02-21 20:56:52 - Bean with name 'dataSource' has been autodetected for JMX exposure
-""2020-02-21 20:56:52 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-""2020-02-21 20:56:52 - Started HttpServer on /0:0:0:0:0:0:0:0%0:8025
-""2020-02-21 20:56:52 - Netty started on port(s): 8025
-""2020-02-21 20:56:52 - Started Application in 8.441 seconds (JVM running for 10.525)
-""2020-02-21 20:58:56 - Closing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@548a24a: startup date [Fri Feb 21 20:56:45 EET 2020]; root of context hierarchy
-""2020-02-21 20:58:56 - Unregistering JMX-exposed beans on shutdown
-""2020-02-21 20:58:56 - Unregistering JMX-exposed beans
-""2020-02-21 20:58:56 - Closing JPA EntityManagerFactory for persistence unit 'default'
-""2020-02-21 20:58:56 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
-""2020-02-21 20:58:56 - HikariPool-1 - Shutdown initiated...
-""2020-02-21 20:58:56 - HikariPool-1 - Shutdown completed.
-""2020-02-21 20:58:56 - Stopped HttpServer on /0:0:0:0:0:0:0:0%0:8025
+""2020-02-28 19:03:29 - HHH000412: Hibernate Core {5.2.17.Final}
+""2020-02-28 19:03:29 - HHH000206: hibernate.properties not found
+""2020-02-28 19:03:29 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2020-02-28 19:03:29 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2020-02-28 19:03:30 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@50778bde'
+""2020-02-28 19:03:30 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-28 19:03:30 - Start project initializing...
+""2020-02-28 19:03:30 - Database initialization...
+""2020-02-28 19:03:30 - Project initialized
+""2020-02-28 19:03:31 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 19:03:31 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1be2019a: startup date [Fri Feb 28 19:03:25 EET 2020]; root of context hierarchy
+""2020-02-28 19:03:31 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-02-28 19:03:31 - Mapped "{[/],methods=[GET]}" onto public java.lang.String ru.server.integration.application.controller.MainController.main(org.springframework.ui.Model)
+""2020-02-28 19:03:31 - Mapped "{[/api/user/login],methods=[POST]}" onto public reactor.core.publisher.Mono<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(java.lang.String,java.lang.String)
+""2020-02-28 19:03:31 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2020-02-28 19:03:31 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2020-02-28 19:03:31 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 19:03:31 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 19:03:31 - Adding welcome page template: index
+""2020-02-28 19:03:31 - Registering beans for JMX exposure on startup
+""2020-02-28 19:03:31 - Bean with name 'dataSource' has been autodetected for JMX exposure
+""2020-02-28 19:03:31 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+""2020-02-28 19:03:32 - Tomcat started on port(s): 8025 (http) with context path ''
+""2020-02-28 19:03:32 - Started Application in 7.939 seconds (JVM running for 9.725)
+""2020-02-28 19:03:41 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2020-02-28 19:03:41 - FrameworkServlet 'dispatcherServlet': initialization started
+""2020-02-28 19:03:41 - FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+""2020-02-28 19:03:41 - Main page...
+""2020-02-28 19:03:48 - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1be2019a: startup date [Fri Feb 28 19:03:25 EET 2020]; root of context hierarchy
+""2020-02-28 19:03:48 - Unregistering JMX-exposed beans on shutdown
+""2020-02-28 19:03:48 - Unregistering JMX-exposed beans
+""2020-02-28 19:03:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-28 19:03:48 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+""2020-02-28 19:03:48 - HikariPool-1 - Shutdown initiated...
+""2020-02-28 19:03:48 - HikariPool-1 - Shutdown completed.
+""2020-02-28 19:10:25 - Starting Application on hp with PID 6817 (/home/alvin/projects/java/ServerIntegration/target/classes started by alvin in /home/alvin/projects/java/ServerIntegration)
+""2020-02-28 19:10:25 - The following profiles are active: prod
+""2020-02-28 19:10:25 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e0b85f9: startup date [Fri Feb 28 19:10:25 EET 2020]; root of context hierarchy
+""2020-02-28 19:10:27 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1aebb233] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-02-28 19:10:28 - Tomcat initialized with port(s): 8025 (http)
+""2020-02-28 19:10:28 - Starting service [Tomcat]
+""2020-02-28 19:10:28 - Starting Servlet Engine: Apache Tomcat/8.5.34
+""2020-02-28 19:10:28 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+""2020-02-28 19:10:28 - Initializing Spring embedded WebApplicationContext
+""2020-02-28 19:10:28 - Root WebApplicationContext: initialization completed in 3132 ms
+""2020-02-28 19:10:28 - Servlet dispatcherServlet mapped to [/]
+""2020-02-28 19:10:28 - Servlet webServlet mapped to [/h2/*]
+""2020-02-28 19:10:28 - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2020-02-28 19:10:28 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2020-02-28 19:10:28 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2020-02-28 19:10:28 - Mapping filter: 'requestContextFilter' to: [/*]
+""2020-02-28 19:10:28 - HikariPool-1 - Starting...
+""2020-02-28 19:10:29 - HikariPool-1 - Start completed.
+""2020-02-28 19:10:29 - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2020-02-28 19:10:29 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2020-02-28 19:10:29 - HHH000412: Hibernate Core {5.2.17.Final}
+""2020-02-28 19:10:29 - HHH000206: hibernate.properties not found
+""2020-02-28 19:10:29 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2020-02-28 19:10:29 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2020-02-28 19:10:30 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@338766de'
+""2020-02-28 19:10:30 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-28 19:10:31 - Start project initializing...
+""2020-02-28 19:10:31 - Database initialization...
+""2020-02-28 19:10:31 - Project initialized
+""2020-02-28 19:10:31 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 19:10:31 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e0b85f9: startup date [Fri Feb 28 19:10:25 EET 2020]; root of context hierarchy
+""2020-02-28 19:10:31 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-02-28 19:10:32 - Mapped "{[/],methods=[GET]}" onto public java.lang.String ru.server.integration.application.controller.MainController.main(org.springframework.ui.Model)
+""2020-02-28 19:10:32 - Mapped "{[/api/user/login],methods=[POST]}" onto public reactor.core.publisher.Mono<ru.server.integration.application.domain.User> ru.server.integration.application.controller.UserController.login(java.lang.String,java.lang.String)
+""2020-02-28 19:10:32 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2020-02-28 19:10:32 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2020-02-28 19:10:32 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 19:10:32 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2020-02-28 19:10:32 - Adding welcome page template: index
+""2020-02-28 19:10:32 - Registering beans for JMX exposure on startup
+""2020-02-28 19:10:32 - Bean with name 'dataSource' has been autodetected for JMX exposure
+""2020-02-28 19:10:32 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+""2020-02-28 19:10:32 - Tomcat started on port(s): 8025 (http) with context path ''
+""2020-02-28 19:10:32 - Started Application in 8.571 seconds (JVM running for 10.367)
+""2020-02-28 19:11:04 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2020-02-28 19:11:04 - FrameworkServlet 'dispatcherServlet': initialization started
+""2020-02-28 19:11:04 - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+""2020-02-28 19:11:04 - Main page...
+""2020-02-28 19:11:08 - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e0b85f9: startup date [Fri Feb 28 19:10:25 EET 2020]; root of context hierarchy
+""2020-02-28 19:11:08 - Unregistering JMX-exposed beans on shutdown
+""2020-02-28 19:11:08 - Unregistering JMX-exposed beans
+""2020-02-28 19:11:08 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-02-28 19:11:08 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+""2020-02-28 19:11:08 - HikariPool-1 - Shutdown initiated...
+""2020-02-28 19:11:08 - HikariPool-1 - Shutdown completed.
 "
