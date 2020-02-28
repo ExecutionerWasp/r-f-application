@@ -1,2 +1,6 @@
 *.iml
 /.idea
+/target
+/node_modules
+/dist
+/log
